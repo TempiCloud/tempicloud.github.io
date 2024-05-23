@@ -12,28 +12,8 @@
     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 
     This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.fghjfghjf
+    the `--base-href` argument provided to `flutter build`.
   -->
-
-  <script src="secrets.js"></script>
-  <script>
-    window.addEventListener('load', function() {
-      // Function to initialize the app with the secret
-      fetchSecret();
-    });
-
-    function fetchSecret() {
-      const googleCloudServiceAccount = window._env_.GOOGLE_CLOUD_SERVICE_ACCOUNT;
-      if (googleCloudServiceAccount) {
-        // Inject the secret into your app's global state or configuration
-        // For example, you can define a global variable or modify an existing one
-        window.googleCloudServiceAccount = googleCloudServiceAccount;
-        console.log('Google Cloud Service Account:', googleCloudServiceAccount);
-      } else {
-        console.error('Secret is not defined');
-      }
-    }
-  </script>
   <base href="/">
   <meta name="google-signin-client_id" content="39440970633-rsi5tlb7koq4439ahiono2g2nbp91slp.apps.googleusercontent.com">
 
