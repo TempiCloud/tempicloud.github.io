@@ -26,12 +26,29 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1666315140";
+    const serviceWorkerVersion = "1437863105";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
+<!-- IMPORTANT: load pdfjs files -->
+<script
+        src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.min.js"
+        type="text/javascript"
+></script>
+<script type="text/javascript">
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.worker.min.js";
+  pdfRenderOptions = {
+    // where cmaps are downloaded from
+    cMapUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/cmaps/",
+    // The cmaps are compressed in the case
+    cMapPacked: true,
+    // any other options for pdfjsLib.getDocument.
+    // params: {}
+  };
+</script>
 <script src="flutter_bootstrap.js" async></script>
 <script>
   window.addEventListener('load', function(ev) {
